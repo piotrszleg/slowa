@@ -36,6 +36,7 @@ window.addEventListener('load', (event)=>{
             <td>${k}</td>
             <td>${v.liczba}</td>
             <td>${(v.procent*100).toFixed(2)}%</td>
+            <td><a onclick="pokaz('${k}')" href="javascript:void(0);">pokaż</a><td>
         </tr>`);
     }
     write("</table>");
