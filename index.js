@@ -1,12 +1,10 @@
 pokaz=litera=>{
     result="";
-    write(`<table style="width:100%">`);
-    write(`<tr><td>Slowa</td></tr>`);
     write=text=>result+=text;
+    write(`<tr><td>Slowa</td></tr>`);
     slowa.filter(slowo=>slowo[0]===litera).forEach(slowo => {
         write(`<tr><td><a href="https://sjp.pl/${slowo}">${slowo}</a></td></tr>`);
     });
-    write("</table>");
     document.getElementById("slowa").innerHTML=result;
 }
 window.addEventListener('load', (event)=>{
@@ -25,7 +23,6 @@ window.addEventListener('load', (event)=>{
     }
     result="";
     write=text=>result+=text;
-    write(`<table style="width:100%">`);
     write(`<tr>
         <td>Pierwsza Litera</td>
         <td>Liczba słów</td>
@@ -39,6 +36,5 @@ window.addEventListener('load', (event)=>{
             <td><a onclick="pokaz('${k}')" href="javascript:void(0);">pokaż</a><td>
         </tr>`);
     }
-    write("</table>");
     document.getElementById("tablica").innerHTML=result;
 });
